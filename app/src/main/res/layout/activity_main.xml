@@ -7,65 +7,52 @@
     tools:context=".MainActivity"
     tools:ignore="MissingClass">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/showImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
-        tools:context=".MainActivity">
+        android:layout_height="400dp"
+        android:src="#dedede"
+        tools:layout_editor_absoluteY="15dp" />
 
-        <EditText
-            android:id="@+id/file_title_edittext"
-            android:layout_height="48dp"
-            android:layout_width="match_parent"
-            android:layout_alignParentTop="true" />
+    <Button
+        android:id="@+id/openGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showImage" />
 
-        <EditText
-            android:id="@+id/doc_content_edittext"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:layout_below="@id/file_title_edittext"
-            android:layout_above="@id/btn_layout" />
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openGallery" />
 
-        <LinearLayout
-            android:id="@+id/btn_layout"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:orientation="horizontal"
-            android:layout_alignParentBottom="true">
+    <Button
+        android:id="@+id/prevBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Prev"
+        app:layout_constraintEnd_toStartOf="@+id/nextBtn"
+        app:layout_constraintHorizontal_bias="0.299"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/openGallery" />
 
-            <Button
-                android:id="@+id/open_btn"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Open"
-                style="?attr/buttonBarButtonStyle" />
+    <Button
+        android:id="@+id/recognizeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Recognize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextBtn" />
 
-            <Button
-                android:id="@+id/create_btn"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Create"
-                style="?attr/buttonBarButtonStyle" />
 
-            <Button
-                android:id="@+id/save_btn"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Save"
-                style="?attr/buttonBarButtonStyle" />
-
-            <Button
-                android:id="@+id/query_btn"
-                android:layout_height="match_parent"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:text="Query"
-                style="?attr/buttonBarButtonStyle" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
